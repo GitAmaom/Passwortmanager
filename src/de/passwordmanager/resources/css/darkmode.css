@@ -1,0 +1,607 @@
+/*
+ * Copyright (c) 2011-2018 JFXtras
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *      * Redistributions of source code must retain the above copyright
+ *        notice, this list of conditions and the following disclaimer.
+ *      * Redistributions in binary form must reproduce the above copyright
+ *        notice, this list of conditions and the following disclaimer in the
+ *        documentation and/or other materials provided with the distribution.
+ *      * Neither the name of the organization nor the
+ *        names of its contributors may be used to endorse or promote products
+ *        derived from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ *  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ *  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+ *  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ *  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ *  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.root{
+    -fx-background-color: rgb(18,18,18);
+    -icons-color: white;
+}
+
+.label {
+	-fx-text-fill: white;
+	-fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Button                                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+
+    -fx-background-radius: 0;
+
+    -fx-background-color: rgb(18,18,18);
+  
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 9pt;
+    -fx-text-fill: rgb(245,245,245);
+}
+
+.button:hover{
+    -fx-background-color: rgb(36,36,36);
+    -fx-text-fill: white;
+}
+
+.button:pressed {
+	-fx-background-color: rgb(9,9,9);
+	-fx-text-fill: rgb(230,230,230);
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled
+{
+    -fx-opacity: 0.4;
+    -fx-background-color: rgb(14,14,14);
+    -fx-text-fill: white;
+}
+
+.button:default
+{
+    -fx-background-color: rgb(18,18,18);
+    -fx-text-fill: white;
+}
+
+.button:default:hover{
+    -fx-background-color: rgb(36,36,36);
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Tableview                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.table-view {
+    -fx-base: rgb(24,24,24);
+    -fx-background-color: rgb(24,24,24);
+    -fx-control-inner-background: rgb(24,24,24);
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent derive(-fx-base, 80%) transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view.column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 15;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:focused {
+    -fx-border-color: derive(-fx-base, 20%);
+    -fx-background-insets: 0 0 0 0;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view:focused .table-row-cell:selected {
+    -fx-background-color: derive(-fx-base, 20%);
+    -fx-background-insets: 0 0 0 0;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Context Menu                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+.context-menu {
+    -fx-background-color: rgb(18,18,18);
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-padding: 0.333333em 0em 0.333333em 0em;
+}
+
+.context-menu .separator .line{
+    -fx-padding: 0.0em 0.333333em 0.0em 0.333333em;  /*0 4 0 4 */
+    -fx-border-style: solid;
+    -fx-background-color: #c2c2c2;
+    -fx-border-width: 0.5px;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Menu Bar                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu-bar {
+    -fx-background-color: rgb(18,18,18);
+    -fx-background-insets: 0 0 0 0;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1.166667em; /* 14 */
+}
+
+.menu-bar > .container > .menu-button {
+    -fx-padding: 0.5em 0.666667em 0.5em 0.666667em; /* 6 8 6 8 */
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+}
+
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background-color: rgb(36,36,36);
+}
+
+.menu-bar > .container > .menu-button > .label,
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing  > .label {
+    -fx-text-fill: white;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Menu Item                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu-item {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-padding: 0.583333em 1em 0.583333em 1em;   /*7 12 7 12 */
+}
+
+.menu-item .label {
+    -fx-padding: 0em 1.333332em 0em 0em;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1.166667em; /* 14 */
+}
+
+.menu-item > .graphic-container {
+    -fx-padding: 0em 0.75em 0em 0em;
+}
+
+.radio-menu-item:checked > .left-container > .radio {
+    -fx-shape: "M17.939,5.439L7.5,15.889l-5.439-5.449l0.879-0.879L7.5,14.111 l9.561-9.551L17.939,5.439z";
+
+    -fx-padding: 5px 7px 5px 7px;
+    -fx-scale-shape: true;
+}
+
+.check-menu-item:checked > .left-container > .check {
+    -fx-shape: "M17.939,5.439L7.5,15.889l-5.439-5.449l0.879-0.879L7.5,14.111 l9.561-9.551L17.939,5.439z";
+
+    -fx-padding: 5px 7px 5px 7px;
+    -fx-scale-shape: true;
+}
+
+.check-menu-item:checked > .left-container {
+    -fx-padding: 0em 1em 0em 0.5em;
+}
+
+.radio-menu-item:checked > .left-container {
+    -fx-padding: 0em 1em 0em 0.5em;
+}
+
+.menu > .right-container > .arrow {
+    -fx-padding: 0.458em 0.333333em 0.458em 0.333333em; /* >5 4 >5 4 */
+    -fx-shape: "M8.06,20.938L7,20l8-8L7,4l1.06-0.938L16.917,12L8.06,20.938z";
+    -fx-scale-shape: true;
+}
+
+.radio-menu-item:checked > .left-container > .radio,
+.check-menu-item:checked > .left-container > .check,
+.menu > .right-container > .arrow {
+    -fx-background-color: white;
+}
+
+/* hover */
+.menu-item:hover,
+.menu-item:focused {
+    -fx-background-color: rgb(36,36,36);
+}
+
+/* pressed */
+.menu-item:pressed {
+    -fx-background-color: rgb(9,9,9);
+}
+
+/* disabled */
+.menu-item:disabled:hover,
+.menu-item:disabled:focused,
+.menu-item:disabled:pressed {
+    -fx-background-color: transparent;
+}
+/*******************************************************************************
+ *                                                                             *
+ * Menu Button                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+ 
+ .menu-button {
+ 	-fx-padding: 1 0 1 0;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+
+    -fx-background-radius: 0;
+
+    -fx-background-color: rgb(18,18,18);
+  
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 9pt;
+    -fx-text-fill: rgb(245,245,245);
+ }
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Check Box                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.check-box {
+    -fx-text-fill: white;
+}
+
+.check-box .box {
+    -fx-background-color: #d1d1d1;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: #d1d1d1;
+    -fx-border-width: 2px;
+    -fx-borders-style: solid;
+    -fx-padding: 1;
+}
+
+.check-box .mark {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    
+    -fx-padding:7px;
+    -fx-shape: "M1,10L3,8L7,12L14,5L16,7L7,16Z"
+}
+
+.check-box:focused .box{
+    -fx-background-color: #d1d1d1;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: white, #d1d1d1;
+    -fx-border-width: 1, 2;
+    -fx-border-style: segments(1, 1), solid;
+    -fx-border-insets: -3, 0;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #202020;
+}
+
+.check-box:indeterminate .mark {
+   -fx-background-color: black; 
+   -fx-background-insets: 2.8; 
+   -fx-padding:7px;
+   -fx-shape: null;
+}
+
+.check-box:disabled
+{
+    -fx-opacity: 0.4;
+}
+
+.check-box:disabled .box
+{
+    -fx-border-color: white;
+    -fx-background-color: white;
+}
+
+.check-box:armed .box
+{
+    -fx-background-color: transparent, white;
+    -fx-background-insets: -1, 2;
+    -fx-background-radius: 0, 0;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ComboBox                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.combo-box-base  {
+    -fx-background-color: transparent, #e2e2e2, transparent, #4a4a4a;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em; /* 2 */
+}
+
+.combo-box-base  .list-cell{
+    -fx-text-fill: white;
+}
+
+.combo-box-base:hover {
+    -fx-background-color: transparent, white, transparent, #4a4a4a;
+    
+}
+
+/*.combo-box-base:focused {
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-radius: 6.4, 4, 5, 3;
+    -fx-background-insets: -1.4, 0, 1, 2;
+}*/
+
+.combo-box-base:disabled {
+    -fx-opacity: .4;
+}
+
+/* ------- OPEN BUTTON ------- */
+.combo-box-base .arrow-button {
+    -fx-background-color: transparent, transparent, #4a4a4a;
+}
+
+/* ------- ARROW* ------- */
+.combo-box-base .arrow {
+    -fx-padding: 0.333333em 0.333333em 0.333333em 0.333333em; /* 4 4 4 4 */
+    -fx-shape: "M8.124,13.625l4.125-3.375v2.889l-4.125,3.86L4,13.139V10.25L8.124,13.625z";
+    -fx-background-color: transparent, #1d1d1d;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #4a4a4a, -fx-control-inner-background;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0) , 8, 0.0 , 0 , 0 );
+}
+
+.combo-box-popup .list-view .list-cell{
+    -fx-background-color: #4a4a4a;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view .list-cell:hover{
+    -fx-background-color: #dedede;
+    -fx-text-fill: #1d1d1d;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected{
+    -fx-background-color: #55c4fe;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #6dcdff;
+}
+
+.combo-box-popup .list-view .list-cell:filled:pressed, .combo-box-popup .list-view .list-cell:filled:selected:pressed
+{
+    -fx-background-color: #d3d3d3;
+    -fx-text-fill: #1d1d1d;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Choice Box                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.choice-box  {
+    -fx-background-color: transparent, #666666, transparent, rgb(18,18,18);
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2px 2 2px*/
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1.333333em; /* 16 */
+}
+
+.choice-box > .label {
+    -fx-text-fill: white;
+}
+
+.choice-box:hover {
+    -fx-background-color: transparent, #999999, transparent, rgb(18,18,18);
+}
+
+.choice-box:focused {
+    -fx-background-color: transparent, white, transparent, rgb(18,18,18);
+    -fx-background-insets: -1.4, 0, 1, 2;
+
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+.choice-box:focused:hover {
+    -fx-background-color: transparent, #999999, transparent, rgb(18,18,18);
+}
+
+.choice-box:disabled {
+    -fx-opacity: .4;
+}
+
+/* ARROW */
+.choice-box > .open-button > .arrow {
+    -fx-padding: 3.5px 6px 3.5px 6px;
+    -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
+    -fx-background-insets: 0 0 0 0, 0;
+    -fx-background-color: white;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Fontawesome                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+ 
+ .glyph-icon {
+ 	-fx-fill: white;
+ }
+
+/*******************************************************************************
+ *                                                                             *
+ * Custom Styles                                                               *
+ *                                                                             *
+ ******************************************************************************/
+ .borderedVBox {
+ 	-fx-border-color: white;
+ }
+ 
+ .iconButton {
+	-fx-padding: 0;
+	-fx-border-color: transparent;
+	-fx-border-width: 0px;
+ }
+ 
+ .customText {
+ 	-fx-fill: white;
+ 	-fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+ }
+ 
+ .customGrid {
+    /* 1 pixel border around the top and right of the grid: */
+    -fx-background-color: white, black;
+    -fx-background-insets: 0, 1 1 0 0 ;
+    -fx-padding: 1 ;
+}
+ 
+ .customCell {
+ 	-fx-background-color: white, black;
+    -fx-background-insets: 0, 0 0 1 1 ;
+ }
+ /* 
+ .iconButton > .arrow-button {
+    -fx-padding: 0;
+}
+
+  .iconButton > .arrow-button > .arrow {
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+
+.iconButton .arrow {
+	-fx-background-color: transparent;
+}
+
+.iconButton .label {
+	-fx-padding: 0;
+}*/
+
+.iconButton:focused {
+	-fx-padding: 0;
+	-fx-border-color: transparent;
+	-fx-border-width: 0px;
+    -fx-background-insets: 0;
+	-fx-background-radius: 0;
+}
+
+.iconButton:hover {
+     -fx-padding: 0;
+	 -fx-border-color: transparent;
+	 -fx-border-width: 0px;
+	 -fx-color: transparent;
+}
+ 
+/*
+.menu-bar {
+    -fx-background-color: rgb(18,18,18);
+}
+
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background: rgb(24,24,24);
+    -fx-background-color: rgb(24,24,24);
+}
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing  > .label {
+    -fx-text-fill: white;
+}
+
+.menu-item {
+    -fx-background-color: red;
+    -fx-padding: 0.333333em 0.41777em 0.333333em 0.41777em;  
+}
+.menu-item > .left-container {
+    -fx-padding: 0.458em 0.791em 0.458em 0.458em;
+}
+.menu-item > .graphic-container {
+    -fx-padding: 0em 0.333em 0em 0em;
+}
+.menu-item >.label {
+    -fx-padding: 0em 0.5em 0em 0em;
+    -fx-text-fill: -fx-text-base-color;
+}
+.menu-item:focused {
+     -fx-background: -fx-selection-bar;
+     -fx-background-color: -fx-background;
+     -fx-text-fill:  -fx-text-background-color;
+}
+.menu-item:focused > .label {
+    -fx-text-fill: -fx-focused-text-base-color;
+}
+.menu-item > .right-container {
+    -fx-padding: 0em 0em 0em 0.5em;
+}
+.radio-menu-item:checked > .left-container > .radio {
+    -fx-background-color: -fx-mark-color;
+    -fx-shape: "M0,5H2L4,8L8,0H10L5,10H3Z";
+    -fx-scale-shape: false;
+}
+.radio-menu-item:focused:checked > .left-container > .radio {
+    -fx-background-color: -fx-focused-mark-color;
+}
+.check-menu-item:checked > .left-container > .check {
+    -fx-background-color: -fx-mark-color;
+    -fx-shape: "M0,5H2L4,8L8,0H10L5,10H3Z";
+    -fx-scale-shape: false;
+}
+.check-menu-item:focused:checked > .left-container > .check {
+    -fx-background-color: -fx-focused-mark-color;
+}
+*/

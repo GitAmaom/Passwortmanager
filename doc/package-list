@@ -1,0 +1,6 @@
+de.passwordmanager
+de.passwordmanager.controllers
+de.passwordmanager.crypt
+de.passwordmanager.entities
+de.passwordmanager.helpers
+de.passwordmanager.services
