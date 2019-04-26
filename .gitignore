@@ -9,3 +9,7 @@ build.fxbuild
 .idea/
 *.iml
 out/
+
+#Ignore Passwortmanager Files
+tablestate
+profiles.xml
